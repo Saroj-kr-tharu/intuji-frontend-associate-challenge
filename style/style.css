@@ -503,6 +503,11 @@ body {
   font-size: 12px;
   margin-left: 2px;
 }
+.dashboard .rightSideSection .saving-plan .plan-item:hover {
+  background-color: #edeafd;
+  color: #5a4ff3;
+  cursor: pointer;
+}
 .dashboard .rightSideSection .saving-plan .plan-item .progress-container {
   height: 6px;
   background-color: #f0f0f0;
@@ -551,6 +556,11 @@ body {
   align-items: center;
   margin-bottom: 10px;
   padding: 8px 0;
+}
+.dashboard .rightSideSection .recent-transactions .transaction-item:hover {
+  background-color: #edeafd;
+  color: #5a4ff3;
+  cursor: pointer;
 }
 .dashboard .rightSideSection .recent-transactions .transaction-item .transaction-icon {
   width: 20px;
