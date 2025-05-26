@@ -136,7 +136,263 @@
             </div>
         </div>
 
-        <div id="Mainsidesection" class="mainSideSecton"></div>
+        <div id="Mainsidesection" class="mainSideSecton">
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Search here ...">
+                </div>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="section overview-section">
+                <div class="section-header">
+                    <h2>Overview</h2>
+
+                </div>
+
+                <div class="cards-grid">
+                    <!-- Balance Card -->
+                    <div class="stat-card balance-card">
+                        <div class="stat-header">
+                            <div class="stat-icon purple">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="16"></line>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                            </div>
+                            <div class="stat-label">
+                                <h3>Your Balance</h3>
+                                <div class="stat-change positive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polyline points="18 15 12 9 6 15"></polyline>
+                                    </svg>
+                                    15% compared with last month
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-amount">
+                            <h2>$28,891.138</h2>
+                            <div class="arrow-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Saving Card -->
+                    <div class="stat-card saving-card">
+                        <div class="stat-header">
+                            <div class="stat-icon green">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </div>
+                            <div class="stat-label">
+                                <h3>Saving</h3>
+                                <div class="stat-change negative">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                    10% compared with last month
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-amount">
+                            <h2>$1,050.44</h2>
+                            <div class="arrow-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Expenses Card -->
+                    <div class="stat-card expenses-card">
+                        <div class="stat-header">
+                            <div class="stat-icon yellow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z">
+                                    </path>
+                                    <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                                </svg>
+                            </div>
+                            <div class="stat-label">
+                                <h3>Expenses</h3>
+                                <div class="stat-change positive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polyline points="18 15 12 9 6 15"></polyline>
+                                    </svg>
+                                    2% compared with last month
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-amount">
+                            <h2>$200.31</h2>
+                            <div class="arrow-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Incomes Card -->
+                    <div class="stat-card incomes-card">
+                        <div class="stat-header">
+                            <div class="stat-icon blue">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="M12 5l7 7-7 7"></path>
+                                </svg>
+                            </div>
+                            <div class="stat-label">
+                                <h3>Incomes</h3>
+                                <div class="stat-change positive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polyline points="18 15 12 9 6 15"></polyline>
+                                    </svg>
+                                    8% compared with last month
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-amount">
+                            <h2>$21,121.0</h2>
+                            <div class="arrow-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Section -->
+            <div class="section analytics-section">
+                <div class="section-header">
+                    <h2>Analytics</h2>
+                    <div class="analytics-controls">
+                        <div class="legend-items">
+                            <span class="legend-item">
+                                <span class="legend-dot purple"></span>
+                                Label 1
+                            </span>
+                            <span class="legend-item">
+                                <span class="legend-dot yellow"></span>
+                                Label 1
+                            </span>
+                        </div>
+                        <div class="filter-dropdown">
+                            <select>
+                                <option>Weekly</option>
+                                <option>Monthly</option>
+                                <option>Yearly</option>
+                            </select>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="y-axis">
+                        <span>20k</span>
+                        <span>15k</span>
+                        <span>10k</span>
+                        <span>5k</span>
+                        <span>1k</span>
+                        <span>0k</span>
+                    </div>
+                    <div class="chart-area">
+                        <div class="chart-image">
+                            <!-- This would be replaced by an actual chart library in production -->
+                            <svg class="chart" width="100%" height="300" preserveAspectRatio="none"
+                                viewBox="0 0 700 300">
+                                <!-- Purple line (higher values) -->
+                                <path class="chart-line purple"
+                                    d="M0,150 C50,120 100,180 150,100 C200,60 250,150 300,130 C350,150 400,80 450,30 C500,100 550,40 600,80 C650,120 700,150"
+                                    fill="none" stroke="#5a4ff3" stroke-width="2"></path>
+                                <path class="chart-area purple"
+                                    d="M0,150 C50,120 100,180 150,100 C200,60 250,150 300,130 C350,150 400,80 450,30 C500,100 550,40 600,80 C650,120 700,150 L700,300 L0,300 Z"
+                                    fill="url(#purpleGradient)" opacity="0.2"></path>
+
+                                <!-- Yellow line (lower values) -->
+                                <path class="chart-line yellow"
+                                    d="M0,200 C50,180 100,150 150,200 C200,150 250,170 300,150 C350,190 400,210 450,190 C500,170 550,190 600,180 C650,170 700,150"
+                                    fill="none" stroke="#ffce4e" stroke-width="2"></path>
+                                <path class="chart-area yellow"
+                                    d="M0,200 C50,180 100,150 150,200 C200,150 250,170 300,150 C350,190 400,210 450,190 C500,170 550,190 600,180 C650,170 700,150 L700,300 L0,300 Z"
+                                    fill="url(#yellowGradient)" opacity="0.1"></path>
+
+                                <!-- Gradients for area fills -->
+                                <defs>
+                                    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#5a4ff3" stop-opacity="0.5" />
+                                        <stop offset="100%" stop-color="#5a4ff3" stop-opacity="0.05" />
+                                    </linearGradient>
+                                    <linearGradient id="yellowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#ffce4e" stop-opacity="0.5" />
+                                        <stop offset="100%" stop-color="#ffce4e" stop-opacity="0.05" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="x-axis">
+                            <span>Sun</span>
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <div id="Rightsidesection" class="rightSideSection">

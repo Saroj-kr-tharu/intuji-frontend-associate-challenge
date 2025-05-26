@@ -2,6 +2,7 @@ $purple: #5a4ff3;
 $light-purple: #edeafd;
 $yellow: #ffce4e;
 $green: #34c77b;
+$blue: #3e85f3;
 $gray-bg: #f8f8fc;
 $card-radius: 14px;
 $shadow: 0 2px 8px rgba(40, 39, 55, 0.06);
@@ -136,19 +137,349 @@ body {
     }
   }
 
+  // Main Side Section - Center content
   .mainSideSecton {
     width: 60%;
     background-color: $gray-bg;
     padding: 20px;
+    
+    // Search Bar
+    .search-container {
+      margin-bottom: 24px;
+      
+      .search-bar {
+        background-color: white;
+        border-radius: 30px;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        box-shadow: $shadow;
+        
+        svg {
+          color: #8c8c8c;
+          margin-right: 10px;
+        }
+        
+        input {
+          border: none;
+          outline: none;
+          font-size: 14px;
+          width: 100%;
+          color: #292929;
+          
+          &::placeholder {
+            color: #8c8c8c;
+          }
+        }
+      }
+    }
+    
+    // Overview Section
+    .overview-section {
+      background-color: white;
+      border-radius: $card-radius;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: $shadow;
+      
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        
+        h2 {
+          font-size: 18px;
+          font-weight: 600;
+          margin: 0;
+        }
+        
+        .pagination-dots {
+          display: flex;
+          gap: 5px;
+          
+          .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            
+            &.active {
+              background-color: $purple;
+            }
+          }
+        }
+      }
+      
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        
+        .stat-card {
+          background-color: white;
+          border-radius: $card-radius;
+          padding: 16px;
+          box-shadow: $shadow;
+          &:hover {
+            background-color: $purple;
+            color: white;
+          }
+          
+          
+          .stat-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            
+            .stat-icon {
+              width: 40px;
+              height: 40px;
+              border-radius: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-right: 12px;
+              
+              &.purple {
+                background-color: rgba(255, 255, 255, 0.2);
+                color: white;
+              }
+              
+              &.green {
+                background-color: rgba(52, 199, 123, 0.1);
+                color: $green;
+              }
+              
+              &.yellow {
+                background-color: rgba(255, 206, 78, 0.1);
+                color: $yellow;
+              }
+              
+              &.blue {
+                background-color: rgba(90, 79, 243, 0.1);
+                color: $blue;
+              }
+            }
+            
+            .stat-label {
+              h3 {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 500;
+              }
+              
+              .stat-change {
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                margin-top: 4px;
+                
+                svg {
+                  margin-right: 4px;
+                }
+                
+                &.positive {
+                  color: $green;
+                  
+                  svg {
+                    color: $green;
+                  }
+                }
+                
+                &.negative {
+                  color: #ff5c5c;
+                  
+                  svg {
+                    transform: rotate(180deg);
+                    color: #ff5c5c;
+                  }
+                }
+              }
+            }
+          }
+          
+          .stat-amount {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            h2 {
+              font-size: 24px;
+              font-weight: 700;
+              margin: 0;
+            }
+            
+            .arrow-icon {
+              width: 32px;
+              height: 32px;
+              background-color: rgba(255, 255, 255, 0.2);
+              border-radius: 8px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              
+              svg {
+                color: white;
+              }
+            }
+          }
+          
+          &:not(.balance-card) {
+            .arrow-icon {
+              background-color: $light-purple;
+              
+              svg {
+                color: $purple;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    // Analytics Section
+    .analytics-section {
+      background-color: white;
+      border-radius: $card-radius;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: $shadow;
+      
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        
+        h2 {
+          font-size: 18px;
+          font-weight: 600;
+          margin: 0;
+        }
+        
+        .analytics-controls {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          
+          .legend-items {
+            display: flex;
+            gap: 15px;
+            
+            .legend-item {
+              display: flex;
+              align-items: center;
+              font-size: 14px;
+              
+              .legend-dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                margin-right: 8px;
+                
+                &.purple {
+                  background-color: $purple;
+                }
+                
+                &.yellow {
+                  background-color: $yellow;
+                }
+              }
+            }
+          }
+          
+          .filter-dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background-color: #f8f8fc;
+            border-radius: 6px;
+            padding: 8px 14px;
+            
+            select {
+              appearance: none;
+              border: none;
+              background: transparent;
+              font-size: 13px;
+              outline: none;
+              padding-right: 16px;
+              cursor: pointer;
+            }
+            
+            svg {
+              position: absolute;
+              right: 12px;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+      
+      .chart-container {
+        display: flex;
+        height: 300px;
+        
+        .y-axis {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-right: 10px;
+          font-size: 12px;
+          color: #8c8c8c;
+          
+          span {
+            height: 20px;
+            display: flex;
+            align-items: center;
+          }
+        }
+        
+        .chart-area {
+          flex: 1;
+          
+          .chart-image {
+            height: 280px;
+            width: 100%;
+            
+            .chart {
+              overflow: visible;
+            }
+            
+            .chart-line {
+              fill: none;
+              stroke-width: 2;
+            }
+            
+            .chart-area {
+              opacity: 0.2;
+            }
+          }
+          
+          .x-axis {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 12px;
+            font-size: 12px;
+            color: #8c8c8c;
+            
+            span {
+              flex: 1;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
   }
 
+  // Right Side Section
   .rightSideSection {
     width: 20%;
-    padding:  0px 16px;
+    padding: 0px 16px;
     margin-right: 10px;
     margin-top: 12px;
   
-    
     // User Header
     .user-header {
       display: flex;
@@ -182,7 +513,6 @@ body {
             svg {
               color: $purple;
             }
-
           }
         }
       }
@@ -194,7 +524,7 @@ body {
         cursor: pointer;
         
         .avatar {
-          padding:6px;
+          padding: 6px;
           width: 20px;
           height: 20px;
           border-radius: 50%;
@@ -346,7 +676,6 @@ body {
       border-radius: $card-radius;
       box-shadow: $shadow;
 
-
       .transaction-item {
         display: flex;
         align-items: center;
@@ -354,7 +683,6 @@ body {
         padding: 8px 0;
         
         .transaction-icon {
-          
           width: 20px;
           height: 20px;
           background-color: #e0e0e0;
@@ -363,7 +691,7 @@ body {
           align-items: center;
           justify-content: center;
           margin-right: 12px;
-          padding:4px;
+          padding: 4px;
           overflow: hidden;
           
           img {
@@ -377,7 +705,6 @@ body {
             height: 20px;
             color: #555;
           }
-          
         }
         
         .transaction-details {
@@ -417,6 +744,7 @@ body {
     }
   }
 
+  // Responsive Media Queries
   // Medium devices (tablet)
   @media (max-width: $tablet-breakpoint) {
     .leftSidesection {
@@ -425,6 +753,12 @@ body {
     
     .mainSideSecton {
       width: 75%;
+      
+      .overview-section {
+        .cards-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
     }
 
     .rightSideSection {
@@ -460,14 +794,22 @@ body {
       }
     }
 
-    .mainSideSecton, 
+    .mainSideSecton {
+      width: 100%;
+      padding: 16px;
+      
+      .overview-section {
+        .cards-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+    
     .rightSideSection {
       width: 100%;
       margin-bottom: 10px;
-    }
-
-    .rightSideSection {
       display: block;
+      padding: 0 16px;
     }
   }
 }
