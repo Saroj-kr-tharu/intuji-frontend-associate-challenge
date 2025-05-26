@@ -13,14 +13,13 @@
 
         <div id="Leftsidesection" class="leftSidesection">
             <!-- Logo area -->
-            <div class="logo-container">
-                <div class="logo">
-                    <img src="./assets/logo.png" alt="Logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\"
-                        http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\"
-                        stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
-                    <rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect>
-                    <circle cx=\"8.5\" cy=\"8.5\" r=\"1.5\"></circle>
-                    <polyline points=\"21 15 16 10 5 21\"></polyline></svg>'">
+            <div class="wrapper">
+
+                <div class="logo-container">
+                    <div class="logo">
+                        <img src="https://images.vexels.com/media/users/3/131734/isolated/preview/05d86a9b63d1930d6298b27081ddc345-photo-preview-frame-icon.png"
+                            alt="Logo">
+                    </div>
                 </div>
             </div>
 
@@ -138,7 +137,162 @@
         </div>
 
         <div id="Mainsidesection" class="mainSideSecton"></div>
-        <div id="Rightsidesection" class="rightSideSection"></div>
+
+
+        <div id="Rightsidesection" class="rightSideSection">
+            <!-- User Profile Header -->
+            <div class="user-header">
+
+                <div class="notification-area">
+                    <button class="icon-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                    </button>
+                    <button class="icon-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <div class="avatar">
+                        <img src="https://images.vexels.com/media/users/3/131734/isolated/preview/05d86a9b63d1930d6298b27081ddc345-photo-preview-frame-icon.png"
+                            alt="User avatar">
+                    </div>
+                    <span>Mirie Kiritani</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Saving Plans Section -->
+            <div class="saving-plan section">
+                <div class="section-header">
+                    <h2>Saving Plan</h2>
+                    <a href="#" class="see-all">See All</a>
+                </div>
+
+                <!-- Bali Vacation Plan -->
+                <div class="plan-item">
+                    <div class="plan-details">
+                        <h3>Bali Vacation</h3>
+                        <div class="plan-target">Target: August 25 2022</div>
+                    </div>
+                    <div class="plan-amount">
+                        <strong>$1950,21</strong> <span class="target-amount">/$4000</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar blue" style="width: 48%"></div>
+                        <span class="progress-percent">48%</span>
+                    </div>
+                </div>
+
+                <!-- New Gadget Plan -->
+                <div class="plan-item">
+                    <div class="plan-details">
+                        <h3>New Gadget</h3>
+                        <div class="plan-target">Target: August 25 2022</div>
+                    </div>
+                    <div class="plan-amount">
+                        <strong>$790,21</strong> <span class="target-amount">/$1000</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar yellow" style="width: 79%"></div>
+                        <span class="progress-percent">79%</span>
+                    </div>
+                </div>
+
+                <!-- Charity Plan -->
+                <div class="plan-item">
+                    <div class="plan-details">
+                        <h3>Charity</h3>
+                        <div class="plan-target">Target: August 25 2022</div>
+                    </div>
+                    <div class="plan-amount">
+                        <strong>$32,111</strong> <span class="target-amount">/$100</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar green" style="width: 32%"></div>
+                        <span class="progress-percent">32%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Transactions Section -->
+            <div class="recent-transactions section">
+                <div class="section-header">
+                    <h2>Recent Transaction</h2>
+                    <a href="#" class="see-all">See All</a>
+                </div>
+
+                <!-- Transaction Items -->
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <img src="https://images.vexels.com/media/users/3/131734/isolated/preview/05d86a9b63d1930d6298b27081ddc345-photo-preview-frame-icon.png"
+                            alt="Figma">
+                    </div>
+                    <div class="transaction-details">
+                        <h3>Figma</h3>
+                        <div class="transaction-date">August 20, 2022</div>
+                    </div>
+                    <div class="transaction-info">
+                        <div class="transaction-amount">$100</div>
+                        <div class="transaction-status completed">Completed</div>
+                    </div>
+                </div>
+
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <img src="https://images.vexels.com/media/users/3/131734/isolated/preview/05d86a9b63d1930d6298b27081ddc345-photo-preview-frame-icon.png"
+                            alt="YouTube">
+                    </div>
+                    <div class="transaction-details">
+                        <h3>Youtube</h3>
+                        <div class="transaction-date">August 20, 2022</div>
+                    </div>
+                    <div class="transaction-info">
+                        <div class="transaction-amount">$120</div>
+                        <div class="transaction-status completed">Completed</div>
+                    </div>
+                </div>
+
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <img src="https://images.vexels.com/media/users/3/131734/isolated/preview/05d86a9b63d1930d6298b27081ddc345-photo-preview-frame-icon.png"
+                            alt="Spotify">
+                    </div>
+                    <div class="transaction-details">
+                        <h3>Spotify</h3>
+                        <div class="transaction-date">August 20, 2022</div>
+                    </div>
+                    <div class="transaction-info">
+                        <div class="transaction-amount">$15</div>
+                        <div class="transaction-status completed">Completed</div>
+                    </div>
+                </div>
+
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <img src="https://images.vexels.com/media/users/3/131734/isolated/preview/05d86a9b63d1930d6298b27081ddc345-photo-preview-frame-icon.png"
+                            alt="Freepik">
+                    </div>
+                    <div class="transaction-details">
+                        <h3>Freepik</h3>
+                        <div class="transaction-date">August 20, 2022</div>
+                    </div>
+                    <div class="transaction-info">
+                        <div class="transaction-amount">$300</div>
+                        <div class="transaction-status completed">Completed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <script src="script.js"></script>
