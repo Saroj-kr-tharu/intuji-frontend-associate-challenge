@@ -1,0 +1,372 @@
+body {
+  font-family: "Inter", Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  background: #f8f8fc;
+  margin: 0;
+  color: #292929;
+}
+
+.dashboard {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+.dashboard .leftSidesection {
+  width: 20%;
+  background-color: white;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(40, 39, 55, 0.06);
+  border-radius: 0 14px 14px 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+.dashboard .leftSidesection .wrapper {
+  padding: 20px;
+}
+.dashboard .leftSidesection .wrapper .logo-container {
+  background-color: #e9e9e9;
+  padding: 10px 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.dashboard .leftSidesection .wrapper .logo-container .logo {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4px;
+}
+.dashboard .leftSidesection .wrapper .logo-container .logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.dashboard .leftSidesection .nav-section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+.dashboard .leftSidesection .nav-section .nav-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #69686b;
+  padding: 12px 15px;
+  margin: 4px 0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+.dashboard .leftSidesection .nav-section .nav-item .icon {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+.dashboard .leftSidesection .nav-section .nav-item .icon svg {
+  color: #69686b;
+}
+.dashboard .leftSidesection .nav-section .nav-item:hover {
+  background-color: #8069f7;
+  color: #5a4ff3;
+}
+.dashboard .leftSidesection .nav-section .nav-item:hover svg {
+  color: #5a4ff3;
+}
+.dashboard .leftSidesection .nav-section .nav-item.active {
+  color: #000;
+  font-weight: 550;
+}
+.dashboard .leftSidesection .nav-section .nav-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  height: 30px;
+  width: 3px;
+  background-color: #5a4ff3;
+  border-radius: 0 2px 2px 0;
+}
+.dashboard .leftSidesection .nav-section .nav-item.active svg {
+  color: #ffce4e;
+  fill: #ffce4e;
+}
+.dashboard .leftSidesection .divider {
+  height: 1px;
+  background-color: #e9e9e9;
+  margin: 8px 20px;
+}
+.dashboard .leftSidesection .bottom-nav {
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+.dashboard .mainSideSecton {
+  width: 80%;
+  background-color: #f8f8fc;
+  padding: 20px;
+}
+.dashboard .mainSideSecton .help-section {
+  width: 100%;
+}
+.dashboard .mainSideSecton .help-section .help-header {
+  background: linear-gradient(135deg, #5a4ff3, #8069f7);
+  padding: 48px 32px;
+  text-align: center;
+  border-radius: 14px;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(40, 39, 55, 0.06);
+}
+.dashboard .mainSideSecton .help-section .help-header::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: -150px;
+  right: -100px;
+}
+.dashboard .mainSideSecton .help-section .help-header::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  bottom: -100px;
+  left: -50px;
+}
+.dashboard .mainSideSecton .help-section .help-header h1 {
+  color: #ffffff;
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.dashboard .mainSideSecton .help-section .help-header img {
+  width: 100%;
+  border-radius: 14px;
+}
+.dashboard .mainSideSecton .help-section .help-header .search-container {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.dashboard .mainSideSecton .help-section .help-header .search-container .search-input {
+  flex: 1;
+  height: 50px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 14px 0 0 14px;
+  font-size: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.dashboard .mainSideSecton .help-section .help-header .search-container .search-input:focus {
+  outline: none;
+}
+.dashboard .mainSideSecton .help-section .help-header .search-container .search-button {
+  background: #ffce4e;
+  color: #1a1240;
+  border: none;
+  width: 50px;
+  border-radius: 0 14px 14px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard .mainSideSecton .help-section .help-header .search-container .search-button:hover {
+  background: rgb(255, 198.9406779661, 52.5);
+}
+.dashboard .mainSideSecton .help-section .help-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.dashboard .mainSideSecton .help-section .help-categories .help-card {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(40, 39, 55, 0.06);
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.dashboard .mainSideSecton .help-section .help-categories .help-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(40, 39, 55, 0.1);
+}
+.dashboard .mainSideSecton .help-section .help-categories .help-card .card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  background-color: #f5f8ff;
+  font-size: 24px;
+  color: #5a4ff3;
+  padding: 16px;
+}
+.dashboard .mainSideSecton .help-section .help-categories .help-card .card-icon img {
+  width: 100px;
+}
+.dashboard .mainSideSecton .help-section .help-categories .help-card .card-content {
+  flex: 1;
+  padding: 24px;
+}
+.dashboard .mainSideSecton .help-section .help-categories .help-card .card-content h2 {
+  color: #1a1240;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.dashboard .mainSideSecton .help-section .help-categories .help-card .card-content p {
+  color: #69686b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.dashboard .mainSideSecton .help-section .contact-section {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(40, 39, 55, 0.06);
+  text-align: center;
+}
+.dashboard .mainSideSecton .help-section .contact-section h2 {
+  font-size: 20px;
+  color: #1a1240;
+  margin-bottom: 32px;
+}
+.dashboard .mainSideSecton .help-section .contact-section .contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.dashboard .mainSideSecton .help-section .contact-section .contact-container .assistant-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #f5f8ff;
+  padding: 3px;
+}
+.dashboard .mainSideSecton .help-section .contact-section .contact-container .contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.dashboard .mainSideSecton .help-section .contact-section .contact-container .contact-buttons .contact-btn {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.dashboard .mainSideSecton .help-section .contact-section .contact-container .contact-buttons .contact-btn i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+.dashboard .mainSideSecton .help-section .contact-section .contact-container .contact-buttons .contact-btn.chat-btn {
+  background-color: #3e85f3;
+  color: #ffffff;
+}
+.dashboard .mainSideSecton .help-section .contact-section .contact-container .contact-buttons .contact-btn.chat-btn:hover {
+  background-color: rgb(37.9926829268, 117.8243902439, 241.5073170732);
+}
+.dashboard .mainSideSecton .help-section .contact-section .contact-container .contact-buttons .contact-btn.email-btn {
+  background-color: #f5f8ff;
+  color: #3e85f3;
+}
+.dashboard .mainSideSecton .help-section .contact-section .contact-container .contact-buttons .contact-btn.email-btn:hover {
+  background-color: rgb(219.5, 230.15, 255);
+}
+.dashboard .mainSideSecton .help-section .contact-section .contact-container .contact-buttons .contact-btn.phone-btn {
+  background-color: #34c77b;
+  color: #ffffff;
+}
+.dashboard .mainSideSecton .help-section .contact-section .contact-container .contact-buttons .contact-btn.phone-btn:hover {
+  background-color: rgb(46.7171314741, 178.7828685259, 110.5039840637);
+}
+@media (max-width: 991px) {
+  .dashboard .leftSidesection {
+    width: 25%;
+  }
+  .dashboard .mainSideSecton {
+    width: 75%;
+  }
+  .dashboard .mainSideSecton .help-section .help-categories {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .dashboard .mainSideSecton .help-section .contact-container {
+    flex-direction: column;
+  }
+  .dashboard .mainSideSecton .help-section .contact-container .contact-buttons {
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .dashboard .leftSidesection {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+  .dashboard .leftSidesection .nav-section .nav-item span:not(.icon) {
+    display: none;
+  }
+  .dashboard .leftSidesection .nav-section .nav-item .icon {
+    margin-right: 0;
+    justify-content: center;
+  }
+  .dashboard .leftSidesection .bottom-nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .dashboard .mainSideSecton {
+    width: 100%;
+    padding: 16px;
+  }
+  .dashboard .mainSideSecton .help-section .help-header {
+    padding: 32px 16px;
+  }
+  .dashboard .mainSideSecton .help-section .help-header h1 {
+    font-size: 22px;
+  }
+  .dashboard .mainSideSecton .help-section .help-categories {
+    grid-template-columns: 1fr;
+  }
+  .dashboard .mainSideSecton .help-section .help-card .card-icon {
+    width: 70px;
+  }
+  .dashboard .mainSideSecton .help-section .contact-section {
+    padding: 16px;
+  }
+  .dashboard .mainSideSecton .help-section .contact-section .contact-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .dashboard .mainSideSecton .help-section .contact-section .contact-buttons .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

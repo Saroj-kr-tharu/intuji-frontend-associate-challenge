@@ -1,0 +1,338 @@
+// Dashboard variables
+$purple: #5a4ff3;
+$light-purple: #8069f7;
+$yellow: #ffce4e;
+$green: #34c77b;
+$blue: #3e85f3;
+$gray-bg: #f8f8fc;
+$dark-purple: #1a1240;
+$light-blue-bg: #f5f8ff;
+$white: #ffffff;
+$card-radius: 14px;
+$shadow: 0 2px 8px rgba(40, 39, 55, 0.06);
+$sidebar-width: 260px;
+$spacing-unit: 16px;
+
+// Settings page variables
+$primary-color: #4267B2;
+$card-border-radius: 12px;
+$card-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+$card-bg: #fff;
+
+// Icon Colors for settings
+$covid-color: #9c27b0;
+$souvenirs-color: #2196f3;
+$groupes-color: #3f51b5;
+$amis-color: #2196f3;
+$videos-color: #03a9f4;
+$marketplace-color: #03a9f4;
+$enregistrements-color: #9c27b0;
+$evenements-color: #e91e63;
+$proximite-color: #03a9f4;
+$pages-color: #ff5722;
+$emploi-color: #ff9800;
+$gaming-color: #2196f3;
+
+// Breakpoints for responsive design
+$mobile-breakpoint: 767px;
+$tablet-breakpoint: 991px;
+$desktop-breakpoint: 1200px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+// Base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  background: $gray-bg;
+  margin: 0;
+  color: #292929;
+}
+
+// Dashboard layout
+.dashboard {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+
+  .leftSidesection {
+    width: 20%;
+    background-color: white;
+    padding: 0;
+    box-shadow: $shadow;
+    border-radius: 0 $card-radius $card-radius 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    
+    // Logo area
+    .wrapper {
+      padding: 20px;
+      
+      .logo-container {
+        background-color: #e9e9e9;
+        padding: 10px 20px;
+        text-align: center;
+        margin-bottom: 10px;
+        
+        .logo {
+          width: 30px;
+          height: 30px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          padding: 4px;
+          
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    
+    // Navigation sections
+    .nav-section {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px;
+      
+      .nav-item {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #69686b;
+        padding: 12px 15px;
+        margin: 4px 0;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        font-size: 14px;
+        
+        .icon {
+          margin-right: 12px;
+          display: flex;
+          align-items: center;
+          
+          svg {
+            color: #69686b;
+          }
+        }
+        
+        &:hover {
+          background-color: $light-purple;
+          color: $purple;
+          
+          svg {
+            color: $purple;
+          }
+        }
+        
+        &.active {
+          color: #000;
+          font-weight: 550;
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            height: 30px;
+            width: 3px;
+            background-color: $purple;
+            border-radius: 0 2px 2px 0;
+          }
+         
+          svg {
+            color: $yellow;
+            fill: $yellow;
+          }
+        }
+      }
+    }
+    
+    .divider {
+      height: 1px;
+      background-color: #e9e9e9;
+      margin: 8px 20px;
+    }
+    
+    // Push the bottom navigation to the bottom
+    .bottom-nav {
+      margin-top: auto;
+      padding-bottom: 20px;
+    }
+  }
+
+  .mainSideSecton {
+    width: 80%;
+    background-color: $gray-bg;
+    padding: 20px;
+    overflow-y: auto;
+    
+    // Settings page content inside main section
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: $spacing-unit;
+    }
+
+    header {
+      margin-bottom: $spacing-unit * 2;
+      
+      h1 {
+        font-size: 24px;
+        color: #1c1e21;
+        font-weight: 700;
+        text-align: center;
+        
+        @media (min-width: 768px) {
+          text-align: left;
+          font-size: 28px;
+        }
+      }
+    }
+
+    .settings-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: $spacing-unit;
+      
+      @media (min-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      @media (min-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      @media (min-width: $desktop-breakpoint) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .settings-card {
+      @include flex-center;
+      cursor: pointer;
+      background-color: $white;
+      border-radius: $card-border-radius;
+      padding: $spacing-unit;
+      box-shadow: $shadow;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      
+      .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        @include flex-center;
+        justify-content: center;
+        margin-right: $spacing-unit;
+        
+        i {
+          font-size: 20px;
+          color: white;
+        }
+        
+        &.covid { background-color: $covid-color; }
+        &.souvenirs { background-color: $souvenirs-color; }
+        &.groupes { background-color: $groupes-color; }
+        &.amis { background-color: $amis-color; }
+        &.videos { background-color: $videos-color; }
+        &.marketplace { background-color: $marketplace-color; }
+        &.enregistrements { background-color: $enregistrements-color; }
+        &.evenements { background-color: $evenements-color; }
+        &.proximite { background-color: $proximite-color; }
+        &.pages { background-color: $pages-color; }
+        &.emploi { background-color: $emploi-color; }
+        &.gaming { background-color: $gaming-color; }
+      }
+      
+      .label {
+        font-size: 16px;
+        font-weight: 500;
+        color: #1c1e21;
+      }
+    }
+  }
+
+  // Responsive Media Queries for dashboard layout
+  @media (max-width: $tablet-breakpoint) {
+    .leftSidesection {
+      width: 25%;
+    }
+    
+    .mainSideSecton {
+      width: 75%;
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+
+    .leftSidesection {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      
+      .nav-section {
+        .nav-item {
+          span:not(.icon) {
+            display: none;
+          }
+          
+          .icon {
+            margin-right: 0;
+            justify-content: center;
+          }
+        }
+      }
+      
+      .bottom-nav {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+
+    .mainSideSecton {
+      width: 100%;
+      padding: 16px;
+      
+      // Settings mobile optimizations
+      .settings-card {
+        padding: $spacing-unit * 0.75;
+        
+        .icon {
+          width: 36px;
+          height: 36px;
+          
+          i {
+            font-size: 18px;
+          }
+        }
+        
+        .label {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
