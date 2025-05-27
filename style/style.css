@@ -507,9 +507,16 @@ body {
   margin-left: 2px;
 }
 .dashboard .rightSideSection .saving-plan .plan-item:hover {
-  background-color: #edeafd;
   color: #5a4ff3;
   cursor: pointer;
+  background-color: #edeafd;
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.dashboard .rightSideSection .saving-plan .plan-item:hover .transaction-details h3 {
+  color: #5a4ff3;
 }
 .dashboard .rightSideSection .saving-plan .plan-item .progress-container {
   height: 6px;
@@ -564,6 +571,14 @@ body {
   background-color: #edeafd;
   color: #5a4ff3;
   cursor: pointer;
+  background-color: #edeafd;
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.dashboard .rightSideSection .recent-transactions .transaction-item:hover .transaction-details h3 {
+  color: #5a4ff3;
 }
 .dashboard .rightSideSection .recent-transactions .transaction-item .transaction-icon {
   width: 20px;

@@ -516,6 +516,7 @@ body {
           &:hover {
             background-color: $light-purple;
             
+            
             svg {
               color: $purple;
             }
@@ -628,9 +629,19 @@ body {
           }
         }
         &:hover {
-          background-color: $light-purple;
+          // background-color: $light-purple;
           color: $purple;  
           cursor: pointer;
+
+           background-color: $light-purple;
+          border-radius: 8px;
+          padding-left: 10px;
+          padding-right: 10px;
+          cursor: pointer;
+          
+          .transaction-details h3 {
+            color: $purple;
+          }
 
          }
         
@@ -698,6 +709,15 @@ body {
           background-color: $light-purple;
           color: $purple;
           cursor: pointer;
+           background-color: $light-purple;
+          border-radius: 8px;
+          padding-left: 10px;
+          padding-right: 10px;
+          cursor: pointer;
+          
+          .transaction-details h3 {
+            color: $purple;
+          }
          }
         
         .transaction-icon {
