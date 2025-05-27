@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  background: #f8f8fc;
+  margin: 0;
+  color: #292929;
+}
+
+.dashboard {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+.dashboard .leftSidesection {
+  width: 20%;
+  background-color: white;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(40, 39, 55, 0.06);
+  border-radius: 0 14px 14px 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+.dashboard .leftSidesection .wrapper {
+  padding: 20px;
+}
+.dashboard .leftSidesection .wrapper .logo-container {
+  background-color: #e9e9e9;
+  padding: 10px 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.dashboard .leftSidesection .wrapper .logo-container .logo {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4px;
+}
+.dashboard .leftSidesection .wrapper .logo-container .logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.dashboard .leftSidesection .nav-section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+.dashboard .leftSidesection .nav-section .nav-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #69686b;
+  padding: 12px 15px;
+  margin: 4px 0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+.dashboard .leftSidesection .nav-section .nav-item .icon {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+.dashboard .leftSidesection .nav-section .nav-item .icon svg {
+  color: #69686b;
+}
+.dashboard .leftSidesection .nav-section .nav-item:hover {
+  background-color: #8069f7;
+  color: #5a4ff3;
+}
+.dashboard .leftSidesection .nav-section .nav-item:hover svg {
+  color: #5a4ff3;
+}
+.dashboard .leftSidesection .nav-section .nav-item.active {
+  color: #000;
+  font-weight: 550;
+}
+.dashboard .leftSidesection .nav-section .nav-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  height: 30px;
+  width: 3px;
+  background-color: #5a4ff3;
+  border-radius: 0 2px 2px 0;
+}
+.dashboard .leftSidesection .nav-section .nav-item.active svg {
+  color: #ffce4e;
+  fill: #ffce4e;
+}
+.dashboard .leftSidesection .divider {
+  height: 1px;
+  background-color: #e9e9e9;
+  margin: 8px 20px;
+}
+.dashboard .leftSidesection .bottom-nav {
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+.dashboard .mainSideSecton {
+  width: 80%;
+  background-color: #f8f8fc;
+  padding: 20px;
+  overflow-y: auto;
+}
+.dashboard .profile-page {
+  width: 100%;
+  padding: 2rem 2rem 4rem 4rem;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(40, 39, 55, 0.06);
+}
+.dashboard .profile-page .profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.dashboard .profile-page .profile-header .notifications {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  color: #5a4ff3;
+  cursor: pointer;
+}
+.dashboard .profile-page .profile-header .notifications svg {
+  width: 24px;
+  height: 24px;
+}
+.dashboard .profile-page .profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.dashboard .profile-page .profile-section img {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  height: 100%;
+}
+.dashboard .profile-page .profile-section .avatar {
+  border-radius: 14px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #f0f0f0;
+}
+.dashboard .profile-page .profile-section .user-info .role {
+  color: #666;
+}
+.dashboard .profile-page .profile-section .user-info .email {
+  color: #5a4ff3;
+}
+.dashboard .profile-page .profile-section .user-info .location {
+  color: #888;
+}
+.dashboard .profile-page .financial-overview {
+  margin-bottom: 2rem;
+}
+.dashboard .profile-page .financial-overview .balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.dashboard .profile-page .financial-overview .balance .amount {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.dashboard .profile-page .financial-overview .balance .positive {
+  color: #34c77b;
+}
+.dashboard .profile-page .financial-overview .savings-goal .goal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.dashboard .profile-page .financial-overview .savings-goal .progress-bar {
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+.dashboard .profile-page .financial-overview .savings-goal .progress-bar .progress {
+  height: 100%;
+  background: #5a4ff3;
+  border-radius: 4px;
+}
+.dashboard .profile-page .stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f8f8fc;
+  border-radius: 14px;
+}
+.dashboard .profile-page .stats-grid .stat-item .value {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.dashboard .profile-page .quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.dashboard .profile-page .quick-actions .btn {
+  padding: 0.75rem 1.5rem;
+  background: #5a4ff3;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.dashboard .profile-page .quick-actions .btn:hover {
+  background: #8069f7;
+}
+.dashboard .profile-page .recent-transactions .transaction-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.dashboard .profile-page .recent-transactions .transaction-grid .transaction-header {
+  font-weight: 600;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+.dashboard .profile-page .recent-transactions .transaction-grid .positive {
+  color: #34c77b;
+}
+.dashboard .profile-page .recent-transactions .transaction-grid .negative {
+  color: #ff5c5c;
+}
+.dashboard .profile-page .security-settings {
+  margin-top: 2rem;
+}
+.dashboard .profile-page .security-settings .setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+.dashboard .profile-page .security-settings .last-login {
+  color: #666;
+  margin-top: 1rem;
+}
+.dashboard .profile-page .toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+.dashboard .profile-page .toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.dashboard .profile-page .toggle-switch input:checked + .slider {
+  background: #5a4ff3;
+}
+.dashboard .profile-page .toggle-switch input:checked + .slider:before {
+  transform: translateX(24px);
+}
+.dashboard .profile-page .toggle-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ddd;
+  transition: 0.3s;
+  border-radius: 34px;
+}
+.dashboard .profile-page .toggle-switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background: #ffffff;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+@media (max-width: 991px) {
+  .dashboard .profile-page {
+    padding: 1.5rem;
+  }
+  .dashboard .profile-page .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .dashboard .profile-page {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .dashboard .profile-page .profile-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .dashboard .profile-page .quick-actions {
+    flex-direction: column;
+  }
+  .dashboard .profile-page .transaction-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .dashboard .profile-page .stats-grid,
+  .dashboard .profile-page .transaction-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard .profile-page .financial-overview .balance {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 991px) {
+  .dashboard .leftSidesection {
+    width: 25%;
+  }
+  .dashboard .mainSideSecton {
+    width: 75%;
+  }
+}
+@media (max-width: 767px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .dashboard .leftSidesection {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+  .dashboard .leftSidesection .nav-section .nav-item span:not(.icon) {
+    display: none;
+  }
+  .dashboard .leftSidesection .nav-section .nav-item .icon {
+    margin-right: 0;
+    justify-content: center;
+  }
+  .dashboard .leftSidesection .bottom-nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .dashboard .mainSideSecton {
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

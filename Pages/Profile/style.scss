@@ -1,0 +1,495 @@
+// Dashboard variables
+$purple: #5a4ff3;
+$light-purple: #8069f7;
+$yellow: #ffce4e;
+$green: #34c77b;
+$blue: #3e85f3;
+$gray-bg: #f8f8fc;
+$dark-purple: #1a1240;
+$light-blue-bg: #f5f8ff;
+$white: #ffffff;
+$card-radius: 14px;
+$shadow: 0 2px 8px rgba(40, 39, 55, 0.06);
+$sidebar-width: 260px;
+$spacing-unit: 16px;
+
+// Settings page variables
+$primary-color: #4267B2;
+$card-border-radius: 12px;
+$card-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+$card-bg: #fff;
+
+// Icon Colors for settings
+$covid-color: #9c27b0;
+$souvenirs-color: #2196f3;
+$groupes-color: #3f51b5;
+$amis-color: #2196f3;
+$videos-color: #03a9f4;
+$marketplace-color: #03a9f4;
+$enregistrements-color: #9c27b0;
+$evenements-color: #e91e63;
+$proximite-color: #03a9f4;
+$pages-color: #ff5722;
+$emploi-color: #ff9800;
+$gaming-color: #2196f3;
+
+// Breakpoints for responsive design
+$mobile-breakpoint: 767px;
+$tablet-breakpoint: 991px;
+$desktop-breakpoint: 1200px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+// Base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  background: $gray-bg;
+  margin: 0;
+  color: #292929;
+}
+
+// Dashboard layout
+.dashboard {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+
+  .leftSidesection {
+    width: 20%;
+    background-color: white;
+    padding: 0;
+    box-shadow: $shadow;
+    border-radius: 0 $card-radius $card-radius 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    
+    // Logo area
+    .wrapper {
+      padding: 20px;
+      
+      .logo-container {
+        background-color: #e9e9e9;
+        padding: 10px 20px;
+        text-align: center;
+        margin-bottom: 10px;
+        
+        .logo {
+          width: 30px;
+          height: 30px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          padding: 4px;
+          
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    
+    // Navigation sections
+    .nav-section {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px;
+      
+      .nav-item {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #69686b;
+        padding: 12px 15px;
+        margin: 4px 0;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        font-size: 14px;
+        
+        .icon {
+          margin-right: 12px;
+          display: flex;
+          align-items: center;
+          
+          svg {
+            color: #69686b;
+          }
+        }
+        
+        &:hover {
+          background-color: $light-purple;
+          color: $purple;
+          
+          svg {
+            color: $purple;
+          }
+        }
+        
+        &.active {
+          color: #000;
+          font-weight: 550;
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            height: 30px;
+            width: 3px;
+            background-color: $purple;
+            border-radius: 0 2px 2px 0;
+          }
+         
+          svg {
+            color: $yellow;
+            fill: $yellow;
+          }
+        }
+      }
+    }
+    
+    .divider {
+      height: 1px;
+      background-color: #e9e9e9;
+      margin: 8px 20px;
+    }
+    
+    // Push the bottom navigation to the bottom
+    .bottom-nav {
+      margin-top: auto;
+      padding-bottom: 20px;
+    }
+  }
+
+  .mainSideSecton {
+    width: 80%;
+    background-color: $gray-bg;
+    padding: 20px;
+    overflow-y: auto;
+    
+    
+    
+  }
+
+  // Add after base styles and before dashboard layout
+// =================================================
+// Profile Page Styles
+// =================================================
+.profile-page {
+  width: 100%;
+  
+  padding: 2rem 2rem 4rem 4rem;
+  background: $white;
+  border-radius: $card-radius;
+  box-shadow: $shadow;
+
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .notifications {
+      @include flex-center;
+      gap: 0.5rem;
+      color: $purple;
+      cursor: pointer;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .profile-section {
+    @include flex-center;
+    overflow:hidden;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    img{
+      width: 100%;
+      border-radius: $card-radius;
+     object-fit: cover;
+      height: 100%;
+    }
+    
+    .avatar {
+      border-radius: $card-radius;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #f0f0f0;
+    }
+
+    .user-info {
+      .role { color: #666; }
+      .email { color: $purple; }
+      .location { color: #888; }
+    }
+  }
+
+  .financial-overview {
+    margin-bottom: 2rem;
+
+    .balance {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+
+      .amount {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .positive { color: $green; }
+    }
+
+    .savings-goal {
+      .goal-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+      }
+
+      .progress-bar {
+        height: 8px;
+        background: #f0f0f0;
+        border-radius: 4px;
+
+        .progress {
+          height: 100%;
+          background: $purple;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: $gray-bg;
+    border-radius: $card-radius;
+
+    .stat-item {
+      .value {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      background: $purple;
+      color: $white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &:hover {
+        background: $light-purple;
+      }
+    }
+  }
+
+  .recent-transactions {
+    .transaction-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+
+      .transaction-header {
+        font-weight: 600;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #eee;
+      }
+
+      .positive { color: $green; }
+      .negative { color: #ff5c5c; }
+    }
+  }
+
+  .security-settings {
+    margin-top: 2rem;
+
+    .setting-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .last-login {
+      color: #666;
+      margin-top: 1rem;
+    }
+  }
+
+  // Add toggle switch styles using existing variables
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:checked + .slider {
+        background: $purple;
+        &:before {
+          transform: translateX(24px);
+        }
+      }
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ddd;
+      transition: 0.3s;
+      border-radius: 34px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 2px;
+        bottom: 2px;
+        background: $white;
+        transition: 0.3s;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  // Responsive adjustments using existing breakpoints
+  @media (max-width: $tablet-breakpoint) {
+    padding: 1.5rem;
+    
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    margin: 1rem;
+    padding: 1rem;
+
+    .profile-section {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .quick-actions {
+      flex-direction: column;
+    }
+
+    .transaction-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Add this inside your existing dashboard media queries
+// to maintain responsive behavior
+@media (max-width: $mobile-breakpoint) {
+  .profile-page {
+    .stats-grid,
+    .transaction-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .financial-overview {
+      .balance {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+  // Responsive Media Queries for dashboard layout
+  @media (max-width: $tablet-breakpoint) {
+    .leftSidesection {
+      width: 25%;
+    }
+    
+    .mainSideSecton {
+      width: 75%;
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+
+    .leftSidesection {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      
+      .nav-section {
+        .nav-item {
+          span:not(.icon) {
+            display: none;
+          }
+          
+          .icon {
+            margin-right: 0;
+            justify-content: center;
+          }
+        }
+      }
+      
+      .bottom-nav {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+
+    .mainSideSecton {
+      width: 100%;
+      padding: 16px;
+      
+     
+    }
+  }
+}
