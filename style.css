@@ -22,6 +22,9 @@ body {
   flex-direction: column;
   height: 100vh;
   position: relative;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
 }
 .dashboard .leftSidesection .wrapper {
   padding: 20px;
@@ -105,9 +108,9 @@ body {
   padding-bottom: 20px;
 }
 .dashboard .mainSideSecton {
-  width: 80%;
+  width: 60%;
   background-color: #f8f8fc;
-  padding: 40px;
+  padding: 20px;
 }
 .dashboard .mainSideSecton .search-container {
   margin-bottom: 24px;
@@ -376,13 +379,70 @@ body {
   flex: 1;
   text-align: center;
 }
-.dashboard .saving-plan {
+.dashboard .rightSideSection {
+  width: 20%;
+  padding: 0px 16px;
+  margin-right: 10px;
+  margin-top: 12px;
+}
+.dashboard .rightSideSection .user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
   background-color: white;
-  padding: 20px;
-  border-radius: 14px;
+  padding: 4px 16px;
+  border-radius: 30px;
   box-shadow: 0 2px 8px rgba(40, 39, 55, 0.06);
 }
-.dashboard .saving-plan .section-header {
+.dashboard .rightSideSection .user-header .notification-area {
+  display: flex;
+  gap: 10px;
+}
+.dashboard .rightSideSection .user-header .notification-area .icon-button {
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.dashboard .rightSideSection .user-header .notification-area .icon-button:hover {
+  background-color: #edeafd;
+}
+.dashboard .rightSideSection .user-header .notification-area .icon-button:hover svg {
+  color: #5a4ff3;
+}
+.dashboard .rightSideSection .user-header .user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.dashboard .rightSideSection .user-header .user-profile .avatar {
+  padding: 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.dashboard .rightSideSection .user-header .user-profile .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dashboard .rightSideSection .section {
+  margin-bottom: 24px;
+}
+.dashboard .rightSideSection .section .section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -390,225 +450,169 @@ body {
   padding-bottom: 8px;
   border-bottom: 1px solid #f0f0f0;
 }
-.dashboard .saving-plan .section-header h2 {
+.dashboard .rightSideSection .section .section-header h2 {
   font-size: 16px;
   font-weight: 600;
+  color: #292929;
   margin: 0;
 }
-.dashboard .saving-plan .section-header .see-all {
+.dashboard .rightSideSection .section .section-header .see-all {
   color: #5a4ff3;
   text-decoration: none;
   font-size: 14px;
-  transition: all 0.2s ease;
 }
-.dashboard .saving-plan .section-header .see-all:hover {
+.dashboard .rightSideSection .section .section-header .see-all:hover {
   text-decoration: underline;
 }
-.dashboard .saving-plan .plan-item {
+.dashboard .rightSideSection .saving-plan {
+  background-color: white;
+  padding: 10px 16px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(40, 39, 55, 0.06);
+}
+.dashboard .rightSideSection .saving-plan .plan-item {
+  background-color: transparent;
+  border-radius: 0;
   padding: 12px 0;
-  margin-bottom: 12px;
-  border-bottom: 1px solid #f0f0f0;
-  transition: all 0.2s ease;
+  margin-bottom: 8px;
+  box-shadow: none;
 }
-.dashboard .saving-plan .plan-item:last-child {
-  margin-bottom: 0;
-  border-bottom: none;
-}
-.dashboard .saving-plan .plan-item .plan-details {
+.dashboard .rightSideSection .saving-plan .plan-item .plan-details {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.dashboard .saving-plan .plan-item .plan-details h3 {
+.dashboard .rightSideSection .saving-plan .plan-item .plan-details h3 {
   margin: 0;
   font-size: 15px;
   font-weight: 500;
 }
-.dashboard .saving-plan .plan-item .plan-details .plan-target {
+.dashboard .rightSideSection .saving-plan .plan-item .plan-details .plan-target {
   color: #8c8c8c;
   font-size: 12px;
-  margin-top: 4px;
+  margin-top: 3px;
 }
-.dashboard .saving-plan .plan-item .plan-amount {
+.dashboard .rightSideSection .saving-plan .plan-item .plan-amount {
   display: flex;
   align-items: baseline;
   margin: 8px 0;
 }
-.dashboard .saving-plan .plan-item .plan-amount strong {
+.dashboard .rightSideSection .saving-plan .plan-item .plan-amount strong {
   font-size: 16px;
   font-weight: 600;
 }
-.dashboard .saving-plan .plan-item .plan-amount .target-amount {
+.dashboard .rightSideSection .saving-plan .plan-item .plan-amount .target-amount {
   color: #8c8c8c;
   font-size: 12px;
-  margin-left: 4px;
+  margin-left: 2px;
 }
-.dashboard .saving-plan .plan-item:hover {
+.dashboard .rightSideSection .saving-plan .plan-item:hover {
   background-color: #edeafd;
-  border-radius: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: -10px;
-  margin-right: -10px;
+  color: #5a4ff3;
   cursor: pointer;
 }
-.dashboard .saving-plan .plan-item:hover h3 {
-  color: #5a4ff3;
-}
-.dashboard .saving-plan .plan-item .progress-container {
+.dashboard .rightSideSection .saving-plan .plan-item .progress-container {
   height: 6px;
   background-color: #f0f0f0;
   border-radius: 3px;
   position: relative;
-  margin-top: 8px;
-  overflow: hidden;
+  margin-top: 6px;
 }
-.dashboard .saving-plan .plan-item .progress-container .progress-bar {
+.dashboard .rightSideSection .saving-plan .plan-item .progress-container .progress-bar {
   height: 100%;
   border-radius: 3px;
   position: absolute;
   left: 0;
   top: 0;
-  transition: width 0.3s ease;
 }
-.dashboard .saving-plan .plan-item .progress-container .progress-bar.blue {
+.dashboard .rightSideSection .saving-plan .plan-item .progress-container .progress-bar.blue {
   background-color: #5a4ff3;
 }
-.dashboard .saving-plan .plan-item .progress-container .progress-bar.yellow {
+.dashboard .rightSideSection .saving-plan .plan-item .progress-container .progress-bar.yellow {
   background-color: #ffce4e;
 }
-.dashboard .saving-plan .plan-item .progress-container .progress-bar.green {
+.dashboard .rightSideSection .saving-plan .plan-item .progress-container .progress-bar.green {
   background-color: #34c77b;
 }
-.dashboard .saving-plan .plan-item .progress-container .progress-percent {
+.dashboard .rightSideSection .saving-plan .plan-item .progress-container .progress-percent {
   position: absolute;
   right: 0;
   top: -18px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-}
-.dashboard .saving-plan .plan-item .progress-container .progress-bar.blue + .progress-percent {
   color: #5a4ff3;
 }
-.dashboard .saving-plan .plan-item .progress-container .progress-bar.yellow + .progress-percent {
+.dashboard .rightSideSection .saving-plan .plan-item .progress-container .progress-percent:has(+ .yellow) {
   color: #ffce4e;
 }
-.dashboard .saving-plan .plan-item .progress-container .progress-bar.green + .progress-percent {
+.dashboard .rightSideSection .saving-plan .plan-item .progress-container .progress-percent:has(+ .green) {
   color: #34c77b;
 }
-.dashboard .recent-transactions {
+.dashboard .rightSideSection .recent-transactions {
   background-color: white;
+  padding: 20px 16px;
   border-radius: 14px;
-  padding: 20px;
-  margin-bottom: 24px;
   box-shadow: 0 2px 8px rgba(40, 39, 55, 0.06);
 }
-.dashboard .recent-transactions .section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #f0f0f0;
-}
-.dashboard .recent-transactions .section-header h2 {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
-  color: #292929;
-}
-.dashboard .recent-transactions .section-header .see-all {
-  color: #5a4ff3;
-  text-decoration: none;
-  font-size: 14px;
-}
-.dashboard .recent-transactions .section-header .see-all:hover {
-  text-decoration: underline;
-}
-.dashboard .recent-transactions .transaction-item {
+.dashboard .rightSideSection .recent-transactions .transaction-item {
   display: flex;
   align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #f8f8fc;
-  transition: all 0.2s ease;
+  margin-bottom: 10px;
+  padding: 8px 0;
 }
-.dashboard .recent-transactions .transaction-item:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-}
-.dashboard .recent-transactions .transaction-item:hover {
+.dashboard .rightSideSection .recent-transactions .transaction-item:hover {
   background-color: #edeafd;
-  border-radius: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
+  color: #5a4ff3;
   cursor: pointer;
 }
-.dashboard .recent-transactions .transaction-item:hover .transaction-details h3 {
-  color: #5a4ff3;
-}
-.dashboard .recent-transactions .transaction-item .transaction-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #f8f8fc;
+.dashboard .rightSideSection .recent-transactions .transaction-item .transaction-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #e0e0e0;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 16px;
+  margin-right: 12px;
+  padding: 4px;
   overflow: hidden;
-  flex-shrink: 0;
 }
-.dashboard .recent-transactions .transaction-item .transaction-icon img {
+.dashboard .rightSideSection .recent-transactions .transaction-item .transaction-icon img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.dashboard .recent-transactions .transaction-item .transaction-icon svg {
+.dashboard .rightSideSection .recent-transactions .transaction-item .transaction-icon svg {
   width: 20px;
   height: 20px;
   color: #555;
 }
-.dashboard .recent-transactions .transaction-item .transaction-details {
+.dashboard .rightSideSection .recent-transactions .transaction-item .transaction-details {
   flex: 1;
 }
-.dashboard .recent-transactions .transaction-item .transaction-details h3 {
+.dashboard .rightSideSection .recent-transactions .transaction-item .transaction-details h3 {
   margin: 0;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
-  color: #292929;
-  transition: color 0.2s ease;
 }
-.dashboard .recent-transactions .transaction-item .transaction-details .transaction-date {
+.dashboard .rightSideSection .recent-transactions .transaction-item .transaction-details .transaction-date {
   color: #8c8c8c;
-  font-size: 12px;
-  margin-top: 4px;
+  font-size: 11px;
+  margin-top: 2px;
 }
-.dashboard .recent-transactions .transaction-item .transaction-info {
+.dashboard .rightSideSection .recent-transactions .transaction-item .transaction-info {
   text-align: right;
-  flex-shrink: 0;
 }
-.dashboard .recent-transactions .transaction-item .transaction-info .transaction-amount {
+.dashboard .rightSideSection .recent-transactions .transaction-item .transaction-info .transaction-amount {
   font-weight: 600;
-  font-size: 15px;
-  color: #292929;
+  font-size: 14px;
 }
-.dashboard .recent-transactions .transaction-item .transaction-info .transaction-status {
-  font-size: 12px;
-  margin-top: 4px;
-  display: inline-block;
-  border-radius: 12px;
-  padding: 2px 8px;
+.dashboard .rightSideSection .recent-transactions .transaction-item .transaction-info .transaction-status {
+  font-size: 11px;
+  margin-top: 3px;
 }
-.dashboard .recent-transactions .transaction-item .transaction-info .transaction-status.completed {
+.dashboard .rightSideSection .recent-transactions .transaction-item .transaction-info .transaction-status.completed {
   color: #34c77b;
-  background-color: rgba(52, 199, 123, 0.1);
-}
-.dashboard .recent-transactions .transaction-item .transaction-info .transaction-status.pending {
-  color: #ffce4e;
-  background-color: rgba(255, 206, 78, 0.1);
-}
-.dashboard .recent-transactions .transaction-item .transaction-info .transaction-status.failed {
-  color: #ff5c5c;
-  background-color: rgba(255, 92, 92, 0.1);
 }
 @media (max-width: 991px) {
   .dashboard .leftSidesection {
@@ -619,6 +623,9 @@ body {
   }
   .dashboard .mainSideSecton .overview-section .cards-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboard .rightSideSection {
+    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -648,107 +655,11 @@ body {
   .dashboard .mainSideSecton .overview-section .cards-grid {
     grid-template-columns: 1fr;
   }
-}
-
-.mobile-menu-toggle {
-  display: none;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 1000;
-  background-color: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 8px rgba(40, 39, 55, 0.06);
-  cursor: pointer;
-}
-.mobile-menu-toggle .menu-icon {
-  width: 24px;
-  height: 18px;
-  position: relative;
-}
-.mobile-menu-toggle .menu-icon span {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background-color: #5a4ff3;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-.mobile-menu-toggle .menu-icon span:nth-child(1) {
-  top: 0;
-}
-.mobile-menu-toggle .menu-icon span:nth-child(2) {
-  top: 8px;
-}
-.mobile-menu-toggle .menu-icon span:nth-child(3) {
-  top: 16px;
-}
-.mobile-menu-toggle .menu-icon.active span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 8px;
-}
-.mobile-menu-toggle .menu-icon.active span:nth-child(2) {
-  opacity: 0;
-}
-.mobile-menu-toggle .menu-icon.active span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 8px;
-}
-
-@media (max-width: 767px) {
-  .dashboard {
-    flex-direction: column;
-  }
-  .dashboard .mobile-menu-toggle {
-    display: flex;
-  }
-  .dashboard .leftSidesection {
-    width: 50%;
-    height: calc(100vh - 60px);
-    position: fixed;
-    left: -100%;
-    top: 0;
-    z-index: 999;
-    transition: all 0.3s ease;
-    border-radius: 14px;
-    margin: 10px;
-    padding-top: 60px;
-  }
-  .dashboard .leftSidesection.active {
-    left: 0;
-  }
-  .dashboard .leftSidesection .wrapper {
-    padding-top: 0;
-  }
-  .dashboard .leftSidesection .nav-section {
-    padding: 10px;
-  }
-  .dashboard .leftSidesection .nav-section .nav-item {
-    padding: 12px;
-  }
-  .dashboard .leftSidesection .nav-section .nav-item .icon {
-    margin-right: 15px;
-  }
-  .dashboard .leftSidesection .nav-section .nav-item span:not(.icon) {
-    display: block; /* Show text in expanded view */
-  }
-  .dashboard .leftSidesection .bottom-nav {
-    flex-direction: column;
-    margin-top: auto;
-    padding-bottom: 20px;
-  }
-  .dashboard .mainSideSecton {
+  .dashboard .rightSideSection {
     width: 100%;
-    padding: 16px;
-    padding-top: 70px;
-  }
-  .dashboard .mainSideSecton .overview-section .cards-grid {
-    grid-template-columns: 1fr;
+    margin-bottom: 10px;
+    display: block;
+    padding: 0 16px;
   }
 }
 

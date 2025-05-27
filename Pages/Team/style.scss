@@ -1,3 +1,5 @@
+
+$mobile-menu-height: 60px;
 $purple: #5a4ff3;
 $light-purple: #8069f7; // Updated to match the schedule needs
 $yellow: #ffce4e;
@@ -302,6 +304,134 @@ body {
     
     .team-grid {
       gap: $spacing-unit;
+    }
+  }
+}
+
+// mobile-menu-toogle 
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: $shadow;
+  cursor: pointer;
+  
+  .menu-icon {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    
+    span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background-color: $purple;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      
+      &:nth-child(1) {
+        top: 0;
+      }
+      
+      &:nth-child(2) {
+        top: 8px;
+      }
+      
+      &:nth-child(3) {
+        top: 16px;
+      }
+    }
+    
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 8px;
+      }
+      
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 8px;
+      }
+    }
+  }
+}
+
+// Modify the media query for mobile devices
+@media (max-width: $mobile-breakpoint) {
+  .dashboard {
+    flex-direction: column;
+    
+    .mobile-menu-toggle {
+      display: flex;
+    }
+    
+    .leftSidesection {
+      width: 50%;
+      height: calc(100vh - #{$mobile-menu-height});
+      position: fixed;
+      left: -100%;
+      top: 0;
+      z-index: 999;
+      transition: all 0.3s ease;
+      border-radius: $card-radius;
+      margin: 10px;
+      padding-top: $mobile-menu-height;
+      
+      &.active {
+        left: 0;
+      }
+      
+      .wrapper {
+        padding-top: 0;
+      }
+      
+      .nav-section {
+        padding: 10px;
+        
+        .nav-item {
+          padding: 12px;
+          
+          .icon {
+            margin-right: 15px;
+          }
+          
+          span:not(.icon) {
+            display: block; /* Show text in expanded view */
+          }
+        }
+      }
+      
+      .bottom-nav {
+        flex-direction: column;
+        margin-top: auto;
+        padding-bottom: 20px;
+      }
+    }
+    
+    // Add spacing for the main section when sidebar is collapsed
+    .mainSideSecton {
+      width: 100%;
+      padding: 16px;
+      padding-top: 70px;
+      
+      .overview-section {
+        .cards-grid {
+          grid-template-columns: 1fr;
+        }
+      }
     }
   }
 }
