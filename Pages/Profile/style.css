@@ -27,7 +27,11 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  position: relative;
+  position: fixed; /* Changed from relative to fixed */
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 .dashboard .leftSidesection .wrapper {
   padding: 20px;
@@ -114,6 +118,7 @@ body {
   width: 80%;
   background-color: #f8f8fc;
   padding: 20px;
+  margin-left: 20%;
   overflow-y: auto;
 }
 .dashboard .profile-page {
@@ -367,6 +372,7 @@ body {
   .dashboard .mainSideSecton {
     width: 100%;
     padding: 16px;
+    margin-left: 0;
   }
 }
 

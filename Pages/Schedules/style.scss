@@ -41,7 +41,13 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    position: relative;
+    position: fixed; /* Changed from relative to fixed */
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    z-index: 100; 
+
+    
     
     // Logo area
     .wrapper {
@@ -108,7 +114,7 @@ body {
           }
         }
         
-        &.active {
+        &.active { 
           color: #000;
           font-weight: 550;
 
@@ -147,6 +153,7 @@ body {
     width: 80%;
     background-color: $gray-bg;
     padding: 20px;
+    margin-left: 20%; 
     
     // Schedule Container Styles
     .schedule-container {
@@ -370,6 +377,7 @@ body {
     
     .mainSideSecton {
       width: 75%;
+      margin-left: 0%; 
       
       .header {
         flex-direction: column;
